@@ -28,6 +28,12 @@ var apartment = {
 function  getkey(object) {
     for (var key in object){
         console.log(key);
+        for ( var i in object[key]) {
+            console.log(i);
+            for (var j in object[key][i]) {
+                console.log(j);
+            }
+        }
     }
 }
 getkey(apartment);
