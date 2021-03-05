@@ -1,5 +1,4 @@
 // 13: Array method
-
 //const arrNums = [1, 2, 3, 4 ,5];
 
 //Them du lieu o cuoi mang
@@ -33,3 +32,18 @@ const arrNums = [1,2,3,4,5,6,7,8,9]
 const newArrNums = arrNums.map(function (number, index){
     console.log(number)
 })
+
+// cach viet ham map
+Array.prototype.mymap= function (fn) {
+    let newArr = []
+    for (const value of this) {
+        newArr.push(fn(value))
+    }
+    return newArr;
+}
+
+const newarrNums = arrNums.mymap(function(number){
+    return number * 2
+})
+
+console.log(newarrNums);
