@@ -9,6 +9,14 @@ console.log(result);
 
 // funktion map style
 
+// cach 1
+function namesOnly(arr) {
+    const newArr = arr.ap(function(person){
+        return person.name
+    })
+}
+
+// cach 2
 function namesOnly(arr) {
     var result = arr.map(x => x.name);
     return result;
@@ -72,3 +80,5 @@ var nameS = namesOnlyX([
     }
 ])
 console.log(nameS);
+
+
